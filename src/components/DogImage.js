@@ -3,7 +3,7 @@ const DogImage = ({dogUrl}) => {
 
     
     return(
-        <img id='dog-img' src={dogUrl}/>
+        <img id='dog-img' src={dogUrl} alt='random dog'/>
     )
 }
 

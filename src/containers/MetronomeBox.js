@@ -1,8 +1,12 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import ControlBox from './ControlBox'
 import DogImage from '../components/DogImage'
 
 const MetronomeBox = () => {
+
+    useEffect(() => {
+        fetchDog()
+    }, [])
 
     const [BPM, setBPM] = useState(120)
     const [dogUrl, setDogUrl] = useState('')
