@@ -6,10 +6,14 @@ const ControlBox = ({BPM, changeBPM, fetchDog}) => {
     
     const [start, setStart] = useState(false)
     const [tickID, setTickID] = useState(null)
-    const [audio, setAudio] = useState(new Audio(tick))
+    const [audio, setAudio] = useState(new Audio(bark)) //change audio here
 
     const handleChange = (event) => {
         changeBPM(event.target.value)
+        if(start){
+            stopTick()
+            startTick()
+        }
     }
 
     const handleClick = () => {
@@ -37,7 +41,7 @@ const ControlBox = ({BPM, changeBPM, fetchDog}) => {
         <div>
             <div id='buttons'>
                 <input type="range" id='BPM' name='BPM' min='40' max='220' value={BPM}onChange={handleChange} />
-                <button onClick={handleClick} >Start/Stop</button>
+                <button onClick={handleClick} >{start ? 'Stop' : 'Start'}</button>
             </div>
         </div>
     )

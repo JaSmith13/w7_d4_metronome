@@ -25,7 +25,7 @@ const MetronomeBox = () => {
         
         <section>
             <h1>Metrobone</h1>
-            <h2>{BPM}</h2>
+            <h2>{BPM} BPM</h2>
             <ControlBox BPM={BPM} changeBPM={changeBPM} fetchDog={fetchDog}/>
             <DogImage dogUrl={dogUrl}/>
         </section>
