@@ -23,10 +23,12 @@ const MetronomeBox = () => {
 
     return(
         
-        <section>
+        <section id='app-wrapper'>
             <h1>Metrobone</h1>
-            <h2>{BPM} BPM</h2>
-            <ControlBox BPM={BPM} changeBPM={changeBPM} fetchDog={fetchDog}/>
+            <div id='controls'>
+                <h2>{BPM} BPM</h2>
+                <ControlBox BPM={BPM} changeBPM={changeBPM} fetchDog={fetchDog}/>
+            </div>
             <DogImage dogUrl={dogUrl}/>
         </section>
     )

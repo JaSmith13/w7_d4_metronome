@@ -38,12 +38,10 @@ const ControlBox = ({BPM, changeBPM, fetchDog}) => {
     }
 
     return(
-        <div>
-            <div id='buttons'>
+            <>
                 <input type="range" id='BPM' name='BPM' min='40' max='220' value={BPM}onChange={handleChange} />
                 <button onClick={handleClick} >{start ? 'Stop' : 'Start'}</button>
-            </div>
-        </div>
+            </>
     )
 }
 
