@@ -1,9 +1,22 @@
 import {useState} from 'react'
+import ControlBox from './ControlBox'
+
 
 const MetronomeBox = () => {
 
+    const [BPM, setBPM] = useState(120)
+
+    const changeBPM = (newBPM) => {
+        setBPM(newBPM)
+    }
+
     return(
-        <h1>Metronome</h1>
+        
+        <section>
+            <h1>Metronome</h1>
+            <h2>{BPM}</h2>
+            <ControlBox BPM={BPM} changeBPM={changeBPM}/>
+        </section>
     )
 }
 
